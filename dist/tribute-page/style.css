@@ -42,7 +42,7 @@ h3#subtitle {
 
 #tribute-info {
 	background-color: #333;
-	padding: 48px 50px;	
+	padding: 48px 10px;	
 	color: #ddd;
 }
 
@@ -71,4 +71,14 @@ footer {
 	background-color: #fff;
 	padding: 40px 0;
 	text-align: center;
+}
+
+footer img {
+	max-width: 90%;
+	height: auto;
+}
+
+footer h3 {
+	color: #555;
+	letter-spacing: 2px;
 }

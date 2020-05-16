@@ -3,49 +3,91 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>freeCodeCamp - Tribute Page</title>
+	<title>freeCodeCamp - Survey Form</title>
 
 	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<header>	
-		<h1 id="title">freeCodeCamp Survey Form</h1>
-		<p id="description">Thank you for taking the time to help us improve the platform </p>
-	</header>
-
-	<form action="" id="survey-form">
-		<label for="name" id="name-label">Name</label>
-		<input type="text" id="name" required placeholder="Your name here">
-
-		<label for="name" id="email-label" >Email</label>
-		<input type="email" id="email" required placeholder="Your@email.com">
-
-		<label for="name" id="number-label">Number</label>
-		<input type="number" id="number" min="18" max="80" placeholder="Your age here">
+	<div class="main">
+		<header>	
+			<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdarkaugust.files.wordpress.com%2F2014%2F08%2Ftower_of_god_logo.png&f=1&nofb=1" alt="" width="360">
+		</header>
 		
-		<select  id="dropdown">
-			<option value="">Student</option>
-			<option value="">Fulltime Job</option>
-			<option value="">Fulltime Learner</option>
-			<option value="">Hobbyist</option>
-			<option value="">Prefer not to say</option>
-			<option value="">Others</option>
-		</select>
-		
-		<label>Would you recommend freeCodeCamp to a friend?</label>
-		<input type="radio" name="recommend" value="definitely">
-		<input type="radio" name="recommend" value="maybe">
-		<input type="radio" name="recommend" value="sure">
+		<form action="" id="survey-form">
+				
 
-		<label>What would you like to see improved? (Check all that apply)</label>
-		<input type="checkbox" value="Front-end Projects">Front-end Projects 
-		<input type="checkbox" value="Back-end Projects">Back-end Projects 
+			<h1 id="title">A T.O.G. Survey Form for Weebs. </h1>
+			<p id="description">
+				Please answer the questions below to gain a shinsu.
+			</p>
+			
+			<div class="form-group">
+				<label for="name" id="name-label">NAME</label>
+				<input type="text" id="name" required placeholder="Your name here" class="form-input">
+			</div>
+			
+			<div class="form-group">			
+				<label for="name" id="email-label" >EMAIL</label>
+				<input type="email" id="email" required placeholder="Your@email.com" class="form-input">
+			</div>
 
-		<label for="comment">Any comments or suggestions?</label>
-		<textarea name="comment" id="comment" cols="30" rows="10"></textarea>	
+			<div class="form-group">
+				<label for="name" id="number-label">AGE</label>
+				<input type="number" id="number" min="18" max="80" placeholder="Your age here" class="form-input">
+			</div>
 
-		<button type="submit" id="submit">Submit</button>
-	</form>
+			<div class="form-group">	
+				<label for="">WHERE DO YOU READ TOG?</label>		
+				<select  id="dropdown" class="form-input">
+					<option value="">Mangakakalot</option>
+					<option value="">Mangafox</option>
+					<option value="">Mangarock</option>
+					<option value="">Panda</option>
+					<option value="">Webtoon</option>
+					<option value="">Others</option>
+				</select>
+			</div>	
+			
+			
+			<div class="form-group-2">	
+				<label>How will you rate TOG so far?</label>
+				<div class="radio-group">
+					<label><input type="radio" name="recommend" value="very good"> Very Good </label>
+					<label><input type="radio" name="recommend" value="good"> Good </label>
+					<label><input type="radio" name="recommend" value="fair"> Fair </label>
+					<label><input type="radio" name="recommend" value="bad"> Bad </label>
+					<label><input type="radio" name="recommend" value="very bad"> Very Bad </label>
+				</div>
+			</div>
+			
+			<div class="form-group-2">
+				<label>Who is your favorite characters?</label>
+				<div class="check-group">
+					<label><input type="checkbox" value="Front-end Projects">Twenty-Fifth Bam / Jue Viole Grace</label>
+					<label><input type="checkbox" value="Back-end Projects">Khun Aguero Agnes </label>
+					<label><input type="checkbox" value="Back-end Projects">Rak Wraithraiser </label>
+					<label><input type="checkbox" value="Back-end Projects">Endorsi Zahard</label>
+					<label><input type="checkbox" value="Back-end Projects">Ha Yuri Zahard</label>
+					<label><input type="checkbox" value="Back-end Projects">Hwaryun </label>
+					<label><input type="checkbox" value="Back-end Projects">Shibisu </label>
+					<label><input type="checkbox" value="Back-end Projects">Rachel </label> 
+					<label><input type="checkbox" value="Back-end Projects">Zahard  </label>
+					<label><input type="checkbox" value="Back-end Projects">White</label>  
+					<label><input type="checkbox" value="Back-end Projects">Karaka  </label>
+					<label><input type="checkbox" value="Back-end Projects">Baylord Yama </label>
+					<label><input type="checkbox" value="Back-end Projects">Urek Mazino	</label>	  
+					<label><input type="checkbox" value="Back-end Projects">Others	</label>	  
+				</div>
+			</div>
+
+			<div class="form-group-2">
+				<label for="comment">Any comments or suggestions?</label>
+				<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Give us your thoughts on TOG.."></textarea>	
+			</div>
+
+			<button type="submit" id="submit">Submit</button>
+		</form>
+	</div>
 </body>
 </html>
