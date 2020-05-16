@@ -23,6 +23,11 @@ header {
 	text-align: center;
 }
 
+header img {
+	height: auto;
+	max-width: 50%;
+}
+
 #title {
 	padding-top: 20px;
 	font-weight: bold;
