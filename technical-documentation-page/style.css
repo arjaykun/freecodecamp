@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fff;
+	font: 1.2rem Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+pre {
+	overflow: auto;
+	   white-space: pre-wrap;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hl {
+	color:#FFFACD;
+	background-color: #1E90FF; 
+	padding: 4px 8px;
+}
+
+/*nav styles*/
+
+nav {
+	width: 20%;
+	overflow-y: scroll;
+	height: 100vh;
+	background-color: #f7f7f7;
+	position: fixed;
+}
+
+
+nav header {
+	padding: 10px;
+	background-color: #1E90FF;
+	color: #FFFACD;
+}
+
+nav header h1 {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+nav a{
+	display: block;
+	padding: 22px 10px;
+	border-bottom: 1px solid #ccc;
+	font-size: 1rem;
+	color: #333;
+}
+
+
+nav a:hover {
+	background-color: #ccc;
+}
+
+/*main styles*/
+main#main-doc {
+	width: 80%;
+	margin-left: auto;
+}
+
+main > div.title {	
+	padding: 10px 30px;
+	font-size: 1.3rem;
+}
+
+main > div.title p {
+	padding: 15px 0;
+	margin: 10px 0;
+	color: #1E90FF
+}
+
+/*note styles*/
+
+.note {
+	padding: 30px;
+	background-color: #FFFACD;
+	margin: 20px -30px;
+	color: #555;
+	font-size: 1rem;
+}
+
+/*main > sections styles*/
+
+section {
+	padding: 10px 30px;
+	border-top: 1px solid #ccc;
+}
+
+section header {
+	padding: 10px 0;
+	font-size: 1.5rem;
+}
+
+section p {
+	padding: 10px 0;
+	font-size: 1.2rem;
+}
+
+section code {
+
+}
+
+section table {
+	width: 100%;
+	border: 1px solid #f2f2f2;
+	margin: 20px 0;
+	border-collapse: collapse;
+}
+
+th, td{
+	text-align: left;
+	padding: 10px;
+}
+
+section table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+footer {
+	background-color: #4169E1;
+	margin-top: 80px;
+	text-align: center;
+	padding: 50px 20px;
+}
+
+footer img {
+	max-width: 90%;
+	height: auto;
+}
+
+footer h3 {
+	color: #f7f7f7;
+	font-size: 1rem;
+	letter-spacing: 2px;
+}
+
+
+
+/*media queries*/
+
+@media (max-width: 600px){
+	#navbar {
+		display: none;
+	}
+	.container {
+		display: block;
+	}
+
+	main#main-doc {
+		width: 100%;	
+		padding: 0;
+	}
+}

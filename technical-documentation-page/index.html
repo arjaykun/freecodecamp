@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Technical Documentation</title>
+
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./monokai.css">
+<body>
+
+<div class="container">
+	<nav id="navbar" >
+		<header>
+		 <h1>JavaScript | <small>Strings</small></h1>
+		</header>
+
+		<a class="nav-link" href="#JavaScript_Strings">JavaScript Strings</a>
+
+		<a class="nav-link" href="#String_Length">String Length</a>
+
+		<a class="nav-link" href="#Escape_Character">Escape Character</a>
+
+		<a class="nav-link" href="#Breaking_Long_Code_Lines">Breaking Long Code Lines</a>
+
+		<a class="nav-link" href="#Strings_Can_be_Objects_5">Strings Can be Objects 5</a>
+		
+	</nav>
+
+	<main id="main-doc">
+
+		<div class="title">
+			<h1>Javascript Strings</h1>
+			<p>"JavaScript strings are used for storing and manipulating text."</p>
+		</div>
+		<!-- first section -->
+		<section id="JavaScript_Strings" class="main-section">
+			<header>JavaScript Strings</header>
+			<p>A JavaScript string is zero or more characters written inside quotes.</p>
+
+<pre>
+<code data-language="javascript">var x = "John Doe";</code>
+</pre>
+			<p>You can use single or double quotes:</p>
+<pre>
+<code data-language="javascript">
+var carName1 = "Volvo XC60";  // Double quotes 
+var carName2 = 'Volvo XC60';  // Single quotes 
+</code>
+</pre>
+
+			<p>
+				You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+			</p>
+
+<pre>
+<code data-language="javascript">
+var answer1 = "It's alright"; 
+var answer2 = "He is called 'Johnny'"; 
+var answer3 = 'He is called "Johnny"';
+</code>
+</pre>
+
+		</section>
+		
+		<!-- second section -->
+		<section id="String_Length" class="main-section">
+			<header>String Length</header>
+			<p>To find the length of a string, use the built-in <span class="hl">length</span> property:</p>
+
+<pre>
+<code data-language="javascript">
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+var sln = txt.length; 
+</code>
+</pre>
+
+		</section>
+
+		<!-- third section -->
+		<section id="Escape_Character" class="main-section">
+			<header>Escape Character</header>
+			<p>Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+<pre>
+<code data-language="javascript">
+var x = "We are the so-called "Vikings" from the north.";
+</code>
+</pre>
+
+			<p>The string will be chopped to "We are the so-called ".</p>
+			<p>The solution to avoid this problem, is to use the backslash escape character.</p>
+			<p>The backslash <span class="hl">(\)</span> escape character turns special characters into string characters:</p>
+
+			<table>
+				<tr>
+					<th>Code</th>
+					<th>Result</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>\'</td>
+					<td>'</td>
+					<td>Single quote</td>
+				</tr>
+				<tr>
+					<td>\"</td>
+					<td>"</td>
+					<td>Double quote</td>
+				</tr>
+				<tr>
+					<td>\\</td>
+					<td>\</td>
+					<td>Backslash</td>
+				</tr>
+			</table>
+		 	 
+ 	 		<p>The sequence <span class="hl">\"</span>  inserts a double quote in a string:</p>
+<pre>
+<code data-language="javascript">
+var x = "We are the so-called \"Vikings\" from the north."; 
+</code>
+</pre>
+
+ 	 		<p>The sequence  <span class="hl">\'</span>  inserts a single quote in a string:</p>
+
+<pre>
+<code data-language="javascript">
+var x = 'It\'s alright.';
+</code>
+</pre>
+
+ 	 		<p>The sequence  <span class="hl">\\</span>  inserts a backslash in a string:</p>
+		
+<pre>
+<code data-language="javascript">
+var x = "The character \\ is called backslash.";
+</code>
+</pre>
+
+ 	 		<p>Six other escape sequences are valid in JavaScript:</p>
+
+			<ul>
+				<li>\b = 	Backspace </li>
+				<li>\f =	Form Feed </li>
+				<li>\n =	New Line </li>
+				<li>\r =	Carriage Return </li>
+				<li>\t =	Horizontal Tabulator </li>
+				<li>\v =	Vertical Tabulator </li>
+			</ul>
+
+ 	 		<div class="note">
+				The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML. 
+			</div>
+		</section>
+		<!-- note -->
+		
+
+		<!-- fourth section -->
+		<section id="Breaking_Long_Code_Lines" class="main-section">
+			<header>Breaking Long Code Lines</header>
+
+			<p>For best readability, programmers often like to avoid code lines longer than 80 characters.</p>
+			<p>If a JavaScript statement does not fit on one line, the best place to break it is after an operator</p>
+
+
+<pre>
+<code data-language="javascript">
+document.getElementById("demo").innerHTML = 
+"Hello Dolly!"; 
+</code>
+</pre>
+
+			<p>You can also break up a code line <strong>within a text string</strong> with a single backslash:</p>
+
+<pre>
+<code data-language="javascript">
+document.getElementById("demo").innerHTML = "Hello \ 
+Dolly!";
+</code>
+</pre>
+
+			<div class="note">
+				The <span class="hl">\</span> method is not the preferred method. It might not have universal support. 
+				Some browsers do not allow spaces behind the <span class="hl">\</span> character.
+			</div>
+
+			<p>A safer way to break up a string, is to use string addition:</p>
+<pre>
+<code data-language="javascript">
+document.getElementById("demo").innerHTML = "Hello " + 
+"Dolly!";
+</code>
+</pre>
+
+		</section>
+
+		<!-- fifth section -->
+		<section id="Strings_Can_be_Objects_5" class="main-section">
+			<header>Strings Can be Objects 5</header>
+			<p>Normally, JavaScript strings are primitive values, created from literals:</p>
+			<p><span class="hl">var firstName = "John";</span></p>
+			<p>But strings can also be defined as objects with the keyword <span class="hl">new</span> :</p>
+			<p><span class="hl">var firstName = new String("John");</span></p>
+
+<pre>
+<code data-language="javascript">
+var x = "John"; 
+var y = new String("John"); 
+
+// typeof x will return string 
+// typeof y will return object 
+</code>
+</pre>
+			
+			<div class="note">
+				Don't create strings as objects. It slows down execution speed.
+				The <span class="hl">new</span> keyword complicates the code. This can produce some unexpected results:
+			</div>
+
+			<p>When using the <span class="hl">==</span> operator, equal strings are equal:</p>
+
+<pre>
+<code data-language="javascript">
+var x = "John";         
+var y = new String("John"); 
+
+// (x == y) is true because x and y have equal values 
+</code>
+</pre>
+
+			<p> When using the <span class="hl">===</span> operator, equal strings are not equal, because the === operator expects equality in both type and value.</p>
+<pre>
+<code data-language="javascript">
+ var x = "John";      
+var y = new String("John"); 
+
+// (x === y) is false because x and y have different types (string and object) 
+</code>
+</pre>
+
+			<p>Or even worse. Objects cannot be compared:</p>
+
+<pre>
+<code data-language="javascript">
+var x = new String("John");           
+var y = new String("John");	
+
+// (x == y) is false because x and y are different objects
+</code>
+</pre>
+
+<pre>
+<code data-language="javascript">
+var x = new String("John");        
+var y = new String("John");	
+
+// (x === y) is false because x and y are different objects
+</code>
+</pre>
+
+			<div class="note">
+				Note the difference between <span class="hl">(x==y)</span> and <span class="hl">(x===y)</span>.
+				Comparing two JavaScript objects will always return <span class="hl">false</span>.
+			</div>
+		</section>
+
+
+		<footer>
+			<a class="top" href="#header">
+			<i class="fa fa-angle-up"></i>
+			</a>
+			<img src="../logo.png" alt="freeCodeCamp" width="420">  
+			<h3>Responsive Web Design Projects - Technical Documentation Page 
+			By - Ryle Jaylee</h3>
+		</footer>
+	
+	</main>
+</div>
+
+<script src="rainbow-custom.min.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
