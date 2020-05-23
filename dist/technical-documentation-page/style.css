@@ -5,7 +5,6 @@
 }
 
 html {
-
 	scroll-behavior: smooth;
 }
 
@@ -13,11 +12,6 @@ body {
 	background-color: #fff;
 	font: 1.2rem Arial, Helvetica, sans-serif;
 	color: #333;
-}
-
-pre {
-	overflow: auto;
-	   white-space: pre-wrap;
 }
 
 ul {
@@ -36,9 +30,10 @@ a {
 
 /*nav styles*/
 
-nav {
+
+#navbar, #navbar2 {
 	width: 20%;
-	overflow-y: scroll;
+	overflow-y: auto;
 	height: 100vh;
 	background-color: #f7f7f7;
 	position: fixed;
@@ -51,23 +46,26 @@ nav header {
 	color: #FFFACD;
 }
 
-nav header h1 {
+/*nav header h1 {
 	font-size: 1.5rem;
 	text-align: center;
 }
-
+*/
 nav a{
 	display: block;
 	padding: 22px 10px;
 	border-bottom: 1px solid #ccc;
 	font-size: 1rem;
 	color: #333;
+	width: auto;
+	transition: 0.3s;
 }
 
 
 nav a:hover {
 	background-color: #ccc;
 }
+
 
 /*main styles*/
 main#main-doc {
@@ -80,10 +78,11 @@ main > div.title {
 	font-size: 1.3rem;
 }
 
-main > div.title p {
-	padding: 15px 0;
+.subtitle {
+	padding: 15px 30px;
 	margin: 10px 0;
-	color: #1E90FF
+	color: #1E90FF;
+	border-top: 1px solid #ccc;
 }
 
 /*note styles*/
@@ -94,6 +93,32 @@ main > div.title p {
 	margin: 20px -30px;
 	color: #555;
 	font-size: 1rem;
+}
+
+/* collapsible nav */
+
+.title > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-icon, #close-icon {
+	display: none;
+	cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+#nav-icon > div {
+	width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+#nav-icon:hover, #close-icon:hover{
+	opacity: 1;
 }
 
 /*main > sections styles*/
@@ -155,16 +180,75 @@ footer h3 {
 
 /*media queries*/
 
-@media (max-width: 600px){
-	#navbar {
-		display: none;
-	}
+@media (max-width: 1000px){
 	.container {
-		display: block;
+		position: relative;
 	}
 
 	main#main-doc {
 		width: 100%;	
 		padding: 0;
+	}
+
+	section {
+		padding: 10px;
+	}
+
+	.subtitle {
+		margin: 65px 0 0 0 ;
+		text-align: center;
+	}
+	
+	main > div.title {	
+		padding: 10px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		width: 100%;
+		background-color: #222;
+		color: #f7f7f7;
+		z-index: 10;
+	}
+
+	.title h1 {
+		font-size: 2rem;
+		opacity: 0.8;
+		transition: 0.3s;
+	}
+
+	.title h1:hover {
+		opacity: 1;
+	}
+
+	#nav-icon, #close-icon {
+		display: block;
+	}
+
+	#close-icon {
+		font-size: 3rem;
+	}
+
+	#navbar {
+		display: none;
+	}
+
+	#navbar2 {
+		width: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100%;
+		z-index: 15;
+		overflow-x: hidden;
+		transition: width 0.5s;	
+		white-space: nowrap;
+	}
+
+	#navbar2 header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 5px;
 	}
 }
